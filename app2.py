@@ -9,7 +9,6 @@ from datetime import datetime
 import os
 import os.path as osp
 
-st.set_option('server.headless', True)
 
 model = torch.hub.load('ultralytics/yolov5','custom',path='riding-m.pt',force_reload=True)
 def ImgPred(model) :
