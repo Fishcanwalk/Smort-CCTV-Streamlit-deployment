@@ -14,3 +14,4 @@ psutil
 thop>=0.1.1
 protobuf<=3.20.1
 streamlit
+ffmpeg-python
