@@ -3,7 +3,7 @@ import streamlit as st
 from PIL import Image
 from io import *
 import glob
-import cv2
+
 import tempfile
 from datetime import datetime
 import os
