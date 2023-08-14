@@ -11,7 +11,7 @@ import os.path as osp
 
 CFG_MODEL_PATH = "riding-m.pt"
 
-model = torch.hub.load('ultralytics/yolov5','custom',path=CFG_MODEL_PATH,force_reload=True, device=device)
+model = torch.hub.load('ultralytics/yolov5','custom',path=CFG_MODEL_PATH,force_reload=True)
 def ImgPred(model) :
   image_file = st.file_uploader("Upload An Image", type=['png', 'jpeg', 'jpg'])
   col1, col2 = st.columns(2)
