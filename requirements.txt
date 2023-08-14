@@ -13,4 +13,5 @@ clearml>=1.11.0
 ultralytics>=8.0.112
 psutil
 thop>=0.1.1
-protobuf<=3.20.1  
+protobuf<=3.20.1
+streamlit==0.79.0
