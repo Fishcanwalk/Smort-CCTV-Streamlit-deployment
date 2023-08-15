@@ -11,7 +11,7 @@ import os.path as osp
 
 CFG_MODEL_PATH = "riding-m.pt"
 
-model = torch.hub.load('ultralytics/yolov5','custom',path=CFG_MODEL_PATH,force_reload=True)
+model = torch.hub.load('ultralytics/yolov5','custom',path=CFG_MODEL_PATH)
 def ImgPred(model) :
   image_file = st.file_uploader("Upload An Image", type=['png', 'jpeg', 'jpg'])
   col1, col2 = st.columns(2)
@@ -30,8 +30,8 @@ def ImgPred(model) :
       imgCropped = img.crop(box=(crop[0:4]))
     with col2:
       st.image(imgCropped, caption='Model Prediction(s)',use_column_width='always')
-    HM = torch.hub.load('ultralytics/yolov5','custom',path='helmet-m.pt',force_reload=True)
-    LM = torch.hub.load('ultralytics/yolov5','custom',path='LP-2.pt',force_reload=True)
+    HM = torch.hub.load('ultralytics/yolov5','custom',path='helmet-m.pt')
+    LM = torch.hub.load('ultralytics/yolov5','custom',path='LP-2.pt')
     with col3:
       pred1 = HM(imgCropped)
       pred1 = pred1.render()
