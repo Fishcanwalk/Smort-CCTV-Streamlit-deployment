@@ -24,13 +24,13 @@ def ImgPred(model) :
       # Load model
       st.header('Result :')
       pred = model(img)
-      pred = pred.render()
+      Pred = pred.render()
       df = pred.pandas().xyxy[0]
       crop = df.values.tolist()
       crop = crop[0]
       imgCropped = img.crop(box=(crop[0:4]))
     with col2:
-      st.image(pred, caption='Model Prediction(s)',use_column_width='always')
+      st.image(Pred, caption='Model Prediction(s)',use_column_width='always')
     HM = torch.hub.load('ultralytics/yolov5','custom',path='helmet-m.pt')
     LM = torch.hub.load('ultralytics/yolov5','custom',path='LP-2.pt')
     with col3:
