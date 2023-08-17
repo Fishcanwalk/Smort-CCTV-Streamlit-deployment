@@ -40,7 +40,6 @@ def ImgPred(model) :
       predren = pred2.render()
       st.image(predren, caption='Model Prediction(s)',use_column_width='always')
     with col4:
-
       df1 = pred2.pandas().xyxy[0]
       crop1 = df1.values.tolist()
       crop1 = crop1[0]
