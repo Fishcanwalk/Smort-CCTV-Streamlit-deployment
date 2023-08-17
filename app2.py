@@ -29,7 +29,7 @@ def ImgPred(model) :
       crop = crop[0]
       imgCropped = img.crop(box=(crop[0:4]))
     with col2:
-      st.image(imgCropped, caption='Model Prediction(s)',use_column_width='always')
+      st.image(pred, caption='Model Prediction(s)',use_column_width='always')
     HM = torch.hub.load('ultralytics/yolov5','custom',path='helmet-m.pt')
     LM = torch.hub.load('ultralytics/yolov5','custom',path='LP-2.pt')
     with col3:
